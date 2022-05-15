@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_utils_pipex.c                                   :+:      :+:    :+:   */
+/*   ft_utils_pipex_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ekeen-wy <ekeen-wy@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/15 14:12:02 by ekeen-wy          #+#    #+#             */
-/*   Updated: 2022/05/16 00:27:13 by ekeen-wy         ###   ########.fr       */
+/*   Updated: 2022/05/15 23:57:52 by ekeen-wy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_pipex.h"
+#include "ft_pipex_bonus.h"
 
 int	check_file_status(char *file, int i)
 {

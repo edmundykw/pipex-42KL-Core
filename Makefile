@@ -6,49 +6,47 @@
 #    By: ekeen-wy <ekeen-wy@student.42kl.edu.my>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/15 14:20:16 by ekeen-wy          #+#    #+#              #
-#    Updated: 2022/05/15 15:27:43 by ekeen-wy         ###   ########.fr        #
+#    Updated: 2022/05/16 00:01:18 by ekeen-wy         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME := pipex.a
+NAME := pipex
 
 CC := gcc
 
 CFLAGS := -Wall -Wextra -Werror
 
-DEPS := ft_pipex.h
+OUTFLAG := -o
 
-BDEPS := ft_pipex_bonus.h
+DEPS := ft_pipex.h ft_printf_mod/ft_printf.h
 
-PRINTF := ft_printf_mod/libftprintf.a
+BDEPS := ft_pipex_bonus.h ft_printf_mod/ft_printf.h
 
-PRINTFOBJ := ft_printf_mod/*.o
+PRINTFSRC := ft_printf_mod/*.c
 
-SRC := ft_utils_pipex.c
+SRC := ft_utils_pipex.c main.c
 
-BSRC := ft_utils_pipex_bonus.c
+BSRC := ft_utils_pipex_bonus.c main_bonus.c
 
 OBJ := $(SRC:.c=.o)
 
-BOBJ := $(BSRC:.c=.o)
+BOBJ := $(SRC:.c=.o)
+
+PRINTOBJ := $(PRINTFSRC:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJ) 
-	ar csr $(NAME) $? $(PRINTFOBJ)
-
-$(OBJ): $(PRINTF) $(DEPS) $?
-
-$(PRINTF):
-	$(MAKE) -C ft_printf_mod
+$(NAME): $(SRC) $(PRINTFSRC) $(DEPS)
+	$(CC) $(CFLAGS) $(SRC) $(PRINTFSRC) $(OUTFLAG) $(NAME) 
 
 fclean: clean 
-	rm -f $(NAME)
-
+	
 clean:
-	$(MAKE) fclean -C ft_printf_mod
-	rm -f $(OBJ)
+	rm -f $(NAME)
 
 re: fclean all
 
-.PHONY: all clean fclean re
+bonus: $(BSRC) $(PRINTFSRC) $(BDEPS)
+	$(CC) $(CFLAGS) $(BSRC) $(PRINTFSRC) $(OUTFLAG) $(NAME) 
+
+.PHONY: all clean fclean re bonus
