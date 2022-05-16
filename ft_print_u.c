@@ -6,11 +6,11 @@
 /*   By: ekeen-wy <ekeen-wy@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 14:54:30 by ekeen-wy          #+#    #+#             */
-/*   Updated: 2022/03/09 19:35:41 by ekeen-wy         ###   ########.fr       */
+/*   Updated: 2022/05/16 09:22:08 by ekeen-wy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "ft_pipex.h"
 
 static unsigned int	count(unsigned int n)
 {

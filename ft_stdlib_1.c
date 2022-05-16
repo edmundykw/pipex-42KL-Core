@@ -6,11 +6,11 @@
 /*   By: ekeen-wy <ekeen-wy@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 17:48:33 by ekeen-wy          #+#    #+#             */
-/*   Updated: 2022/05/15 13:59:01 by ekeen-wy         ###   ########.fr       */
+/*   Updated: 2022/05/16 09:22:16 by ekeen-wy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "ft_pipex.h"
 
 size_t	ft_strlen(const char *str)
 {
