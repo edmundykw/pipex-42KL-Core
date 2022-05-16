@@ -6,7 +6,7 @@
 /*   By: ekeen-wy <ekeen-wy@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/15 14:12:02 by ekeen-wy          #+#    #+#             */
-/*   Updated: 2022/05/16 09:22:20 by ekeen-wy         ###   ########.fr       */
+/*   Updated: 2022/05/16 09:29:46 by ekeen-wy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	check_file_status(char *file, int i)
 
 	if (i == 0)
 		fd = open(file, O_RDONLY);
-	else if (i == 1)
+	else
 	{
 		fd = open(file, O_WRONLY | O_CREAT
 				| O_TRUNC, 00700);
